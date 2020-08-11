@@ -40,7 +40,7 @@ yelp.info()
 
 ```
 
-<img src= "https://user-images.githubusercontent.com/66487971/89876494-68b6b280-dbc7-11ea-92be-e33efa73f6c0.png" width = 500>
+<img src= "https://user-images.githubusercontent.com/66487971/89876494-68b6b280-dbc7-11ea-92be-e33efa73f6c0.png" width = 350>
 
 ```python
 
@@ -58,7 +58,57 @@ yelp['text length'] = yelp['text'].apply(len)
 
 ```
 
-## EDA
+# EDA
+
+
+## Imports
+
+```python
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_style('white')
+%matplotlib inline
+
+```
+
+```python
+
+g = sns.FacetGrid(yelp,col='stars')
+g.map(plt.hist,'text length')
+
+```
+
+<img src= "https://user-images.githubusercontent.com/66487971/89876894-fabebb00-dbc7-11ea-9e00-980ecf19f6cf.png" width = 400>
+
+
+```python
+
+sns.boxplot(x='stars',y='text length',data=yelp,palette='rainbow')
+
+```
+
+<img src= "https://user-images.githubusercontent.com/66487971/89877001-20e45b00-dbc8-11ea-9d72-8fff5749c725.png" width = 400>
+
+```python
+
+sns.countplot(x='stars',data=yelp,palette='rainbow')
+
+```
+
+<img src= "https://user-images.githubusercontent.com/66487971/89877075-3eb1c000-dbc8-11ea-816b-557ff417db42.png" width = 400>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
