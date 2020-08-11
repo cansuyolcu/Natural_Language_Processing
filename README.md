@@ -14,4 +14,63 @@ All reviews start with 0 "cool" votes, and there is no limit to how many "cool" 
 
 The "useful" and "funny" columns are similar to the "cool" column.
 
+## Imports
+
+```python
+
+import numpy as np
+import pandas as pd
+
+```
+
+## The Data
+
+```python
+
+yelp = pd.read_csv('yelp.csv')
+yelp.head()
+
+```
+
+<img src= "https://user-images.githubusercontent.com/66487971/89876402-47ee5d00-dbc7-11ea-8f3b-4869021c1a41.png" width = 1000>
+
+```python
+
+yelp.info()
+
+```
+
+<img src= "https://user-images.githubusercontent.com/66487971/89876494-68b6b280-dbc7-11ea-92be-e33efa73f6c0.png" width = 500>
+
+```python
+
+yelp.describe()
+
+```
+
+<img src= "https://user-images.githubusercontent.com/66487971/89876585-884ddb00-dbc7-11ea-8bb6-a8f9d2792789.png" width = 500>
+
+**I create a new column called "text length" which is the number of words in the text column.**
+
+```python
+
+yelp['text length'] = yelp['text'].apply(len)
+
+```
+
+## EDA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
